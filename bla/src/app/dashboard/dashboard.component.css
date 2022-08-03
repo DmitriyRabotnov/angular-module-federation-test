@@ -1,0 +1,6 @@
+.hero {
+  background-size: cover;
+  background: url('https://picsum.photos/2000') no-repeat center;
+  height: 350px;
+  margin: 20px 0;
+}
