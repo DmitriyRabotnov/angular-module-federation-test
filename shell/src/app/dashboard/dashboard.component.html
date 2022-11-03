@@ -1,3 +1,5 @@
-<app-wrapper [remote]="'http://localhost:4400'" [module]="'./web-components'">
-  <bla-dashboard></bla-dashboard>
-</app-wrapper>
+<mf-load-wrapper>
+  <one-two-tree-dashboard></one-two-tree-dashboard>
+  <ng-template #loading>External Loading sss...</ng-template>
+  <ng-template #error let-data> External Error Loading Module. {{ data }}</ng-template>
+</mf-load-wrapper>

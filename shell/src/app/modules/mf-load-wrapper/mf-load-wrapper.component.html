@@ -1,0 +1,13 @@
+<ng-container *ngIf="loaded$ | async as loaded; else loadingOrError">
+  <ng-content></ng-content>
+</ng-container>
+<ng-template #loadingOrError>
+  <ng-template *ngIf="hasError$ | async; else loading"
+    [ngTemplateOutlet]="errorRef === undefined ? defaultErrorTemplate : errorRef"
+    [ngTemplateOutletContext]="{ $implicit: errorContent }">
+  </ng-template>
+  <ng-template #loading [ngTemplateOutlet]="loadingRef === undefined ? defaultLoadingTemplate : loadingRef">
+  </ng-template>
+  <ng-template #defaultErrorTemplate let-data> Error Loading Module: {{ data }} </ng-template>
+  <ng-template #defaultLoadingTemplate> Loading...</ng-template>
+</ng-template>

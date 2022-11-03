@@ -1,5 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { loadRemoteEntry, loadRemoteModule } from '@angular-architects/module-federation';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +6,4 @@ import { loadRemoteEntry, loadRemoteModule } from '@angular-architects/module-fe
   styleUrls: ['./app.component.css'],
 
 })
-export class AppComponent implements OnInit {
-  ngOnInit() {
-
-  }
-}
+export class AppComponent {}

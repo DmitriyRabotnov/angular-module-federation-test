@@ -1,7 +1,7 @@
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const mf = require("@angular-architects/module-federation/webpack");
 const path = require("path");
-const share = mf.share;
+// const share = mf.share;
 
 const sharedMappings = new mf.SharedMappings();
 sharedMappings.register(
@@ -10,7 +10,7 @@ sharedMappings.register(
 
 module.exports = {
   output: {
-    uniqueName: "bla",
+    uniqueName: "one-two-three",
     publicPath: "auto"
   },
   optimization: {
@@ -29,10 +29,10 @@ module.exports = {
         library: { type: "module" },
 
         // For remotes (please adjust)
-        name: "bla",
-        filename: "remoteEntry.js",
+        name: "oneTwoThree",
+        filename: "oneTwoThree.js",
         exposes: {
-          './web-components': './src/bootstrap.ts',
+          './one-two-three': './src/bootstrap.ts',
           //'./web-components': './src/app/federated.module.ts',
         },
 

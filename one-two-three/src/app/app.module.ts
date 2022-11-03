@@ -26,10 +26,10 @@ export class AppModule implements DoBootstrap {
 
   ngDoBootstrap(appRef: ApplicationRef) {
     const el = createCustomElement(DashboardComponent, { injector: this.injector });
-    customElements.define('bla-dashboard', el);
+    customElements.define('one-two-tree-dashboard', el);
 
     const el2 = createCustomElement(CardComponent, { injector: this.injector });
-    customElements.define('bla-card', el2);
+    customElements.define('one-two-tree-card', el2);
 
     if (window.location.href.includes('4400')) {
       console.log('BLA standalone mode is running!');
