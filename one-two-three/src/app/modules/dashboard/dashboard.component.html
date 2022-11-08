@@ -1,0 +1,11 @@
+<h3>MFE Dashboard</h3>
+<div class="hero"></div>
+<h4>Cards:</h4>
+<section class="cards">
+  <app-card *ngFor="let card of cards;" name={{card}}>
+  </app-card>
+</section>
+<button (click)="onModuleOneClick()" class="button">Click to Module One</button>
+<button (click)="onModuleTwoClick()" class="button">Click to Module Two</button>
+<button (click)="onGetToHomeClick()" class="button">Click to dashboard home page</button>
+<router-outlet></router-outlet>

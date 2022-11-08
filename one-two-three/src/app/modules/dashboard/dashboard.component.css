@@ -4,3 +4,12 @@
   height: 350px;
   margin: 20px 0;
 }
+.cards {
+  display:flex;
+}
+
+.button {
+  padding: 0.3em;
+  margin: 3px;
+  cursor: pointer
+}
