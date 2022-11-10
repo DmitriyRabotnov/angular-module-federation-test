@@ -24,7 +24,7 @@ export class MfLoadWrapperComponent implements OnInit, AfterViewInit {
 
   errorContent = '';
 
-  async ngOnInit() {
+  ngOnInit() {
     this.loaded$ = loadMicroFrontend({
         remoteEntry: 'http://localhost:4400/oneTwoThree.js', //this.remote,
         exposedModule: './one-two-three' // this.module
